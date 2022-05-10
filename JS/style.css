@@ -1,0 +1,22 @@
+#operator-table {
+	border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+#operator-table tr:nth-child(odd) {
+	background-color: azure;
+	border: 1px solid lightgray
+}
+
+#operator-table th:first-child, #operator-table td:first-child {
+    padding-left: 16px;
+}
+
+#operator-table td, #operator-table th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}

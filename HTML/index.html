@@ -1,0 +1,483 @@
+<!DOCTYPE html> <!-- this document is an HTML5 document -->
+<html lang="en-US"> <!-- root element of an HTML page. lang for search engine purpose-->
+	<!-- contains meta information about the HTML page -->
+	<!-- The HTML <head> tag can also be omitted. Browsers will add all elements before <body>, to a default <head> element. but not recommended. -->
+	<head> 
+		<title> Page Title </title> <!--  document's body -->
+		<!-- the type attribute is not necessary -->
+		<link rel="stylesheet" href="styles.css" type="text/css">
+		<!-- The metadata will not be displayed on the page, but are used by browsers (how to display content or reload page),
+		by search engines (keywords), and other web services.
+		to specify character set, page description, keywords, author of the document, and viewport settings.
+		If not specified, UTF-8 is the default character set in HTML. -->
+		<!-- To display an HTML page correctly, a web browser must know which character set to use. (ASCII, ANSI, ISO-8859-1 are other charsets) -->
+		<meta charset="UTF-8">
+		<!-- <meta name="keywords" content="HTML, CSS, JavaScript">
+			<meta name="description" content="Free Web tutorials">
+			<meta name="author" content="John Doe">
+			<meta http-equiv="refresh" content="30">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<!-- specifies the base URL and/or target for all relative URLs in a page.
+			must have either an href or a target attribute present, or both
+			There can only be one single <base> element in a document! -->
+		<base href="#" target="_blank">
+	</head>
+	<!-- An HTML page will validate without the <html> and <body> tags, but it is strongly recommend to always add the <html> and <body> tags!
+		Omitting <html> and <body> can also crash DOM and XML software. -->
+	<body>
+		<div>
+			<!-- Browsers automatically add some white space (a margin) before and after a heading. Search engines use them  -->
+			<h3>Page Heading</h3>
+			<!-- The title attribute (and all other attributes) can be written with uppercase or lowercase like title or TITLE. -->
+			<!-- The HTML standard does not require quotes around attribute values. demands for XHTML, <p title=About W3Schools> will give prob -->
+			<!-- browsers automatically add some white space (a margin) before and after a paragraph. removed whitespaces and line breaks-->
+			<!-- The id name must contain at least one character, and must not contain whitespaces -->
+			<P id="first-para" title="I'm a tooltip">HTML tags are   not case    
+				sensitive</P>
+		</div>
+		<hr> <!-- thematic break to separate content -->
+		<!-- displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks including indendations in editor -->
+		<pre>
+			My Bonnie lies over the ocean.
+			My Bonnie lies over the sea.
+			My Bonnie lies over the ocean.
+			Oh, bring back my Bonnie to me.
+		</pre>
+		<hr>
+		<!--  colors can be specified using RGB (0-255) values, HEX values(#RRGGBB, 00 to ff ), HSL values(hue, saturation, and lightness), RGBA values, and HSLA values.
+			An RGBA color value is an extension of RGB with an Alpha channel (opacity). 0.0 (fully transparent) and 1.0 (not transparent at all)
+			Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+			Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+			Shades of gray are often defined using equal values for all three parameters -->
+		<div>
+			<h3 style="background-color:rgb(245, 160, 212); color:white; font-family:verdana;">Inline styling</h3>
+			<p style="background-color:rgba(247, 11, 11, 0.5); font-size:150%; text-align:center;">Inline styled content with 50% transparency</p>
+		</div>
+		<hr>
+		<div>
+			<h3>Text formatting</h3>
+			<p><i>italic</i> <b>bold</b> a<sub>subscript0</sub> a<sup>superscript1</sup> <strong>strong and important!</strong> <em>emphasized</em> <small>small</small> <mark>mark</mark> <del>deleted</del> <ins>inserted</ins></p>
+			<h4>HTML Quotation and Citation Elements</h4>
+			<p>Here is a quote from WWF's website:</p>
+			<blockquote cite="http://www.worldwildlife.org/who/index.html">
+				Blockquoted element defines a section that is quoted from another source. These are usually indendated. <q>This is quoted.</q>
+				<!-- Marking abbreviations can give useful information to browsers, translation systems and search-engines. -->
+				<abbr title="abbreviation">This is abbr</abbr>
+			</blockquote>
+			<!-- The contact information can be an email, URL, address, phone, social media handle. usually renders in italic. will always add a line break before and after tag -->
+			<address>
+				Written by John Doe.<br>
+				Visit us at:<br>
+				Example.com<br>
+				Box 564, Disneyland<br>
+				USA
+			</address>
+			<!-- defines the title of a creative work. usually renders in italic. -->
+			<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+			<!-- Bi-Directional Override. to override the current text direction -->
+			<bdo dir="rtl">This text will be written from right to left</bdo>
+			<!-- word break Opportunity tag specifies where in a text it would be ok to add a line-break. -->
+			<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.</p>
+		</div>
+		<hr>
+		<div>
+			<h3>Images</h3>
+			<!-- Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. -->
+
+			<!-- Always specify the width and height of an image. If width and height are not specified, the web page might flicker while the image loads.
+			The width, height, and style attributes are all valid in HTML. However, we suggest using the style attribute. It prevents styles sheets from changing the size of images -->
+
+			<!-- Absolute URL(hosted on another website), Relative URL(hosted within another website)-->
+			<!--  If the URL begins without a slash, it will be relative to the current page.
+				If the URL begins with a slash, it will be relative to the domain -->
+			<!-- It is almost always best to use relative URLs. They will not break if you change domain. -->
+
+			<!-- HTML allows animated GIFs.
+			<map> - Defines an image map, <area> - Defines a clickable area inside an image map, <picture> - Defines a container for multiple image resources -->
+			<img id="bird-image" src="./assets/Bird.jpg" width="50" height="60" alt="image of a bird">
+
+			<br> <!-- Inserts a single line break -->
+
+			<!-- With HTML image maps, you can create clickable areas on an image. -->
+			<!-- The idea behind an image map is that you should be able to perform different actions depending on where in the image you click. -->
+			<h5>Image map</h5>
+			<img src="./assets/workplace.jpg" alt="Workplace" usemap="#workmap">
+			<map name="workmap">
+				<!-- shape = rect/circle/poly/default(entire region) -->
+				<area shape="rect" coords="34,44,270,350" alt="Computer" href="./assets/dummy.html">
+				<area shape="rect" coords="290,172,333,250" alt="Phone" href="./assets/dummy.html">
+				<area shape="circle" coords="337,300,44" alt="Coffee" href="./assets/dummy.html">
+			</map>
+
+			<!-- If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element.
+			To avoid repeat, set background-repeat: no-repeat -->
+			<!-- If you want the background image to cover the entire element, set background-size: cover.
+			to make sure the entire element is always covered, set background-attachment: fixed
+			This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions,
+			but the image might get cut if it is larger than the section's size ) -->
+			<h5>Background cover</h5>
+			<div style="background-image: url('./assets/Bird.jpg'); height: 300px; width:600px; background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+			</div>
+
+			<!-- If you want the background image to stretch to fit the entire element, you can set the background-size property to 100% 100%: -->
+			<h5>Image stretch</h5>
+			<div style="background-image: url('./assets/Bird.jpg'); height: 300px; width:600px;  background-size: 100% 100%;"></div>
+
+			<!-- The HTML <picture> element allows you to display different pictures for different devices or screen sizes.
+			The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute.
+			This way the browser can choose the image that best fits the current view and/or device. -->
+			<h5>Picture</h5>
+			<!-- When to use picture:
+				1. Bandwidth - If you have a small screen or device, it is not necessary to load a large image file.
+					The browser will use the first <source> element with matching attribute values, and ignore any of the following elements.
+				2. Format Support - Some browsers or devices may not support all image formats.
+					By using the <picture> element, you can add images of all formats, and the browser will use the first format it recognizes, and
+					ignore any of the following elements.-->
+			<picture>
+				<source media="(min-width: 650px)" srcset="./assets/Phoenix.jpg">
+				<source media="(min-width: 465px)" srcset="./assets/Bird.jpg">
+				<img src="./assets/Dragon.jpg"> <!-- used by browsers that do not support the <picture> element, or if none of the <source> tags matches. -->
+			</picture>
+		</div>
+		<hr>
+		<div>
+			<h3>Links</h3>
+			<!-- target = _self/_blank/_parent/_top/framename(for iframe) -->
+			<!-- can change link color using css selectors like a:link, a:visited, a:hover, a:active -->
+			<ul>
+				<li><a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a></li>
+				<li><a href="https://www.w3schools.com/" target="_blank"><img src="./assets/Bird.jpg" alt="HTML tutorial" style="width:42px;height:42px;"></a></li>
+				<li><a href="mailto:someone@example.com">Send email</a></li>
+				<li><button onclick="document.location='default.asp'">HTML Tutorial</button></li>
+				<li><a href="#first-para">Jump to start</a></li>
+				<!-- You can also add a link to a bookmark on another page -->
+				<li><a href="index.html#first-para">Jump to a link in another html</a></li>
+			</ul>
+		</div>
+		<hr>
+		<div>
+			<h3>Tables</h3>
+			<!-- By default, the text in <th> elements are bold and centered. the text in <td> elements are regular and left-aligned.
+				<td> can contain all sorts of HTML elements; text, images, lists, other tables, etc. -->
+
+			<!-- Border spacing specifies the space between the cells. If the table has collapsed borders, border-spacing has no effect. -->
+			<!-- colspan, rowspan -->
+				<table style="width:100%">
+					<caption>People</caption>
+					<colgroup> <!-- specifies a group of one or more columns in a table for formatting -->
+						<col span="2" style="background-color:aquamarine">
+						<col style="background-color:papayawhip">
+					</colgroup>
+					<tr>
+					  <th>Firstname</th>
+					  <th>Lastname</th> 
+					  <th>Age</th>
+					</tr>
+					<tr>
+					  <td>Jill</td>
+					  <td>Smith</td>
+					  <td>50</td>
+					</tr>
+					<tr>
+					  <td>Eve</td>
+					  <td>Jackson</td>
+					  <td>94</td>
+					</tr>
+					<tr>
+					  <td>John</td>
+					  <td>Doe</td>
+					  <td>80</td>
+					</tr>
+				</table>
+			<!-- The <tfoot> tag is used to group footer content in an HTML table.
+				The <tfoot> element is used in conjunction with the <thead> and <tbody> elements to specify each part of a table (footer, header, body).
+				Browsers can use these elements to enable scrolling of the table body independently of the header and footer.
+				Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page. -->
+		</div>
+		<hr>
+		<div>
+			<h3>Lists</h3>
+			<h5>Unordered list</h5>
+			<!-- list-style-type:disc/circle/square/none -->
+			<!-- can also have list inside another list -->
+			<ul>
+				<li>Coffee</li>
+				<li>Tea</li>
+				<li>Milk</li>
+			</ul>
+			<h5>Ordered list</h5>
+			<!-- type="1"/"A"/"a"/"I"/"i", starting count -->
+			<ol start="50">
+				<li>Coffee</li>
+				<li>Tea</li>
+				<li>Milk</li>
+			</ol>
+			<h5>Description list</h5>
+			<dl>
+				<dt>Coffee</dt>
+				<dd>- black hot drink</dd>
+				<dt>Milk</dt>
+				<dd>- white cold drink</dd>
+			</dl>
+		</div>
+		<hr>
+		<div>
+			<!-- starts on a new line and takes up the full width available  -->
+			<h3>Block Elements</h3>
+			<p style="height: 100px; width:300px; overflow:auto; border: 1px solid black;">
+				address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1-h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video
+			</p>
+			<!-- does not start on a new line and it only takes up as much width as necessary. -->
+			<!--  An inline element cannot contain a block-level element! -->
+			<h3>Inline Elements</h3>
+			<p style="height: 100px; width:300px; overflow:auto; border: 1px solid black;">
+				a, abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, output, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var
+			</p>
+		</div>
+		<hr>
+		<div>
+			<!-- An HTML iframe is used to display a web page within a web page. -->
+			<h3>Iframe</h3>
+			<!--  It is a good practice to always include a title attribute, screen readers use it. By default, an iframe has a border around it. -->
+			<iframe src="./assets/dummy.html" name="iframe_a" height="300px" width="600px" title="Iframe Example"></iframe>
+			<p><a href="https://codepen.io/your-work" target="iframe_a">Open Code Pen</a></p>
+		</div>
+		<hr>
+		<div>
+			<h3>HTML Semantics</h3>
+			<p>
+				<!-- The <header> element represents a container for introductory content or a set of navigational links.
+					You can have several <header> elements in one HTML document -->
+				header - Defines a header for a document or a section <br>
+				nav - Defines a set of navigation links <br>
+				main - Specifies the main content of a document <br>
+				<!--  you will find HTML pages with <section> elements containing <article> elements, and <article> elements containing <section> elements. -->
+				section - Defines a section in a document <br>
+				article - Defines an independent, self-contained content <br>
+				aside - Defines content aside from the content (like a sidebar) <br>
+				<!-- authorship/copyright/contact info, back to top links -->
+				footer - Defines a footer for a document or a section <br>
+				details - Defines additional details that the user can open and close on demand <br>
+				summary - Defines a heading for the details element <br>
+				figure  - tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. <br>
+				figcaption - tag defines a caption for a figure element. It can be placed as the first or as the last child of figure element
+			</p>
+			<figure>
+				<img src="./assets/html_semantics.PNG" alt="Dragon">
+				<figcaption>Fig1. - HTML5 Semantic layout</figcaption>
+			</figure>
+			<details>
+				<summary>Summary</summary>
+				<p>The elaborate details about the summary goes here...</p>
+			</details>
+			<!-- The datetime attribute of this element is used translate the time into a machine-readable format
+				so that browsers can offer to add date reminders through the user's calendar, and search engines can produce smarter search results. -->
+			<p>We are open from <time>10:00</time> to <time>21:00</time> every weekday. I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+		</div>
+		<hr>
+		<div>
+			<h3>HTML Computercode</h3>
+			<code>
+				x = 5;<br>
+				y = 6;<br>
+				z = x + y;
+			</code>
+			<!-- The content inside is displayed in the browser's default monospace font. -->
+			<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+			<p><samp>File not found.<br>Press F1 to continue</samp></p>
+			<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var></p>
+		</div>
+		<hr>
+		<div>
+			<h3>HTML Entities, Symbols, Emojis</h3>
+			<!-- Reserved characters in HTML must be replaced with character entities. -->
+			<!--  Browsers may not support all entity names, but the support for entity numbers is good. and there are more symbols that have entity numbers -->
+			<p>&nbsp;, &lt;, &gt;, &amp;, &quot;, &apos;, &cent;, &pound;, &yen;, &euro;, &copy;, &reg;</p>
+			<!-- A diacritical mark is a "glyph" added to a letter. Some diacritical marks, like grave (  ̀) and acute (  ́) are called accents. -->
+
+			<!-- Emojis look like images, or icons, but they are not. They are letters (characters) from the UTF-8 (Unicode) character set.
+				Since Emojis are characters, they can be copied, displayed, and sized just like any other character in HTML. can also style them with size. -->
+			<p>&#128512; &#128516; &#128525; &#128151;</p>
+		</div>
+		<hr>
+		<div>
+			<h3>HTML URL Encode</h3>
+			<!-- A Uniform Resource Locator (URL) -->
+			<p>scheme://prefix.domain:port/path/filename</p>
+			<p>
+				scheme - defines the type of Internet service (most common is http or https) <br>
+				prefix - defines a domain prefix (default for http is www) <br>
+				domain - defines the Internet domain name (like w3schools.com) <br>
+				port - defines the port number at the host (default for http is 80) <br>
+				path - defines a path at the server (If omitted: the root directory of the site) <br>
+				filename - defines the name of a document or resource
+			</p>
+			<!-- URLs can only be sent over the Internet using the ASCII character-set. 
+				If a URL contains characters outside the ASCII set, the URL has to be converted.
+				URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.
+				URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.
+				URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20. -->
+		</div>
+		<hr>
+		<div>
+			<h3>HTML Forms</h3>
+			<!-- ACTION - Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+				 If the action attribute is omitted, the action is set to the current page. -->
+			<!-- TARGET - The target attribute specifies where to display the response that is received after submitting the form. -->
+			<!-- METHOD - The form-data can be sent as URL variables. The default HTTP method is GET.
+					GET:
+						Appends the form data to the URL, in name/value pairs
+						NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+						The length of a URL is limited (2048 characters)
+						Useful for form submissions where a user wants to bookmark the result
+						GET is good for non-secure data, like query strings in Google
+					POST:
+						Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+						POST has no size limitations, and can be used to send large amounts of data.
+						Form submissions with POST cannot be bookmarked
+			-->
+			<!-- autocomplete - browser suggestion based on previous inputs -->
+			<!-- novalidate - specifies that the form-data (input) should not be validated when submitted -->
+			<!-- enctype - Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+				multipart/form-data, text/plain, application/x-www-form-urlencoded -->
+			<!-- re; - specifies the relationship between the current document and the linked document. -->
+			<form id="myForm" name="myForm" action="" target="_blank" method="post" autocomplete="on" novalidate accept-charset="utf-8" enctype="multipart/form-data">
+				<!-- The default width of an input field is 20 characters. -->
+				<!-- each input field must have a name attribute to be submitted.
+					If the name attribute is omitted, the value of the input field will not be sent at all. -->
+				<!-- checked/disabled/max/maxlength/min/pattern(regex cond)/readonly/required/size/step/value/multiple/placeholder/autofocus -->
+				<!-- The value of a read-only input field will be sent and The value of a disabled input field will not be sent when submitting the form! -->
+				<!-- The multiple attribute works with the following input types: email, and file. -->
+				<label for="fname">First name:</label><br>
+				<input type="text" id="fname" name="fname" value="John" form="myForm"><br>
+				<label for="lname">Last name:</label><br>
+				<input type="text" id="lname" name="lname" value="Doe" formaction=""><br> <!-- formaction overrides form's action attribute -->
+				<!-- To define a pre-selected option, add the selected attribute to the option
+					Use the size attribute to specify the number of visible values - removes the input text and displays only dropdown
+					Use the multiple attribute to allow the user to select more than one value - removes the input text and displays only dropdown -->
+				<label for="phones">Choose a phone:</label><br>
+				<select id="phones" name="Phones">
+					<option value="oneplus" selected>One Plus</option>
+					<option value="pixel">Pixel</option>
+					<option value="iphone">IPhone</option>
+					<option value="moto">Moto</option>
+				</select><br>
+				<!-- Users will see a drop-down list of the pre-defined options as they input data.
+					The list attribute of the <input> element, must refer to the id attribute -->
+				<label for="browsers">Choose a browser:</label><br>
+				<input list="browsers">
+				<datalist id="browsers">
+					<option value="Internet Explorer">
+					<option value="Firefox">
+					<option value="Chrome">
+					<option value="Opera">
+					<option value="Safari">
+				</datalist><br>
+				<!-- You can also define the size of the text area by using CSS -->
+				<label for="desc">Decsription:</label><br>
+				<textarea id="desc" name="Description" rows="10" cols="30">
+					Description goes here...
+				</textarea><br>
+				<label for="pwd">Password:</label><br>
+				<input type="password" id="pwd" name="pwd"><br>
+				<label for="pwd">Tech:</label><br>
+				<input type="checkbox" id="html" name="html" value="HTML">
+				<label for="html"> HTML</label><br>
+				<input type="checkbox" id="css" name="css" value="CSS">
+				<label for="css"> CSS</label><br>
+				<input type="checkbox" id="js" name="js" value="JS">
+				<label for="js"> JS</label><br>
+				<label for="cars">Choose a car in grouped dropdown:</label><br>
+				<select name="cars" id="cars">
+					<optgroup label="Swedish Cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+					</optgroup>
+					<!-- to disable a group -->
+					<optgroup label="German Cars" disabled>
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					</optgroup>
+				</select><br>
+				<label for="favcolor">Select your favorite color:</label><br>
+				<input type="color" id="favcolor" name="favcolor"><br>
+				<label for="birthday">Birthday:</label><br>
+				<input type="date" id="birthday" name="birthday" max="2025-12-31" min="2000-01-02"><br>
+				<!-- specifies a date and time input field, with no time zone. -->
+				<label for="birthdaytime">Birthday (date and time):</label><br>
+				<input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+				<!-- e-mail address can be automatically validated when submitted
+					Some smartphones recognize the email type, and add ".com" to the keyboard to match email input. -->
+				<label for="email">Enter your email:</label><br>
+				<input type="email" id="email" name="email"><br>
+				<label for="myfile">Select a file:</label><br>
+				<input type="file" id="myfile" name="myfile"><br>
+				<!-- allows the user to select a month and year. -->
+				<label for="bdaymonth">Birthday (month and year):</label><br>
+				<input type="month" id="bdaymonth" name="bdaymonth"><br>
+				<label for="quantity">Quantity (between 1 and 5):</label><br>
+				<input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+				<!-- Default range is 0 to 100. -->
+				<label for="vol">Volume (between 0 and 50):</label><br>
+				<input type="range" id="vol" name="vol" min="0" max="50"><br>
+				<label for="gsearch">Search Google:</label><br>
+				<input type="search" id="gsearch" name="gsearch"><br>
+				<!-- The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
+					Use the global title attribute to describe the pattern to help the user	 -->
+				<label for="phone">Enter your phone number:</label><br>
+				<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+				<label for="appt">Select a time:</label><br>
+				<input type="time" id="appt" name="appt"><br>
+				<!-- automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input. -->
+				<label for="homepage">Add your homepage:</label><br>
+				<input type="url" id="homepage" name="homepage"><br>
+				<!-- allows the user to select a week and year. -->
+				<label for="week">Select a week:</label><br>
+  				<input type="week" id="week" name="week"><br>
+				<!-- Always specify the type attribute for the button element. Different browsers may use different default types for the button element. -->
+				<button type="button" onclick="alert('Hey there!')">Click Me!</button>
+				<!-- reset all form values to their default values -->
+				<input type="reset">
+				<!-- If you omit the submit button's value attribute, the button will get a default text -->
+				<!-- formenctype works with the following input types: submit and image. -->
+				<input type="submit" value="Submit" formmethod="post" formenctype="multipart/form-data">
+				<!--  formenctype overrides form's enctype attribute -->
+				<!--  formmethod/formtarget/formnovalidate="formnovalidate" overrides corresponding form's attribute -->
+			</form> 
+			<form action="">
+				<fieldset>
+					<legend>Personalia:</legend>
+					<label for="fname">First name:</label><br>
+					<input type="text" id="fname" name="fname" value="John"><br>
+					<label for="lname">Last name:</label><br>
+					<input type="text" id="lname" name="lname" value="Doe"><br><br>
+					<input type="submit" value="Submit">
+				</fieldset>
+			</form>
+			<!-- The <output> element represents the result of a calculation -->
+			<form action=""
+				oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+				<label>Output:</label>
+				0<input type="range" id="a" name="a" value="50">100 +
+				<input type="number" id="b" name="b" value="50">=
+				<output name="x" for="a b"></output>
+				<br>
+				<input type="submit">
+			</form>
+		</div>
+		<hr>
+		<div>
+			<h3>HTML Canvas Graphics</h3>
+			<canvas id="canvas1" class="canvas" width="200" height="100"></canvas>
+			<canvas id="canvas2" class="canvas" width="200" height="100"></canvas>
+			<canvas id="canvas3" class="canvas" width="200" height="100"></canvas>
+			<canvas id="canvas4" class="canvas" width="200" height="100"></canvas>
+			<canvas id="canvas5" class="canvas" width="200" height="100"></canvas>
+			<canvas id="canvas6" class="canvas" width="200" height="100"></canvas><br>
+			<canvas id="canvas7" class="canvas" width="200" height="100"></canvas>
+			<p><button onclick="drawImageInCanvas()">Draw Image</button></p>
+		</div>
+		<!-- type attribute not required here -->
+		<script type="text/javaScript" src="index.js"></script>
+	</body>
+</html>

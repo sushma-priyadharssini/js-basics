@@ -1,0 +1,26 @@
+/* The word cascading means that a style applied to a parent element will also apply to all children elements within the parent.
+Inline, Internal, External */
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse; /* otherwise each cell will have separate border */
+	width: 100%;
+}
+  
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+  
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+#myForm input, #myForm textarea, #myForm select {
+	margin-bottom: 15px;
+}
+
+.canvas {
+	border: 1px solid black;
+}

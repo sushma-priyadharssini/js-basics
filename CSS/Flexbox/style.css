@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+    width: 100%; 
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Flex Container properties */
+.container {
+    border: 6px solid black;
+    display: flex; /* inline-flex */
+    flex-direction: row; /* row-reverse, column, column-reverse */
+    /* Test flex-wrap with flex-direction: column and set height: 400px  */
+    flex-wrap: nowrap; /* wrap(wraps items in next row/column), wrap-reverse */ 
+    /* just a replacement to use combination of flex-direction and flex-wrap at once*/
+    flex-flow: row nowrap;
+    /* To align items on main-axis,
+     test this with flex-direction: column and set height: 400px  */
+    justify-content: flex-start; /* flex-end, center, space-between, space-around, space-evenly */
+    /* To align items on cross-axis,
+     test this with flex-direction: column and set height: 400px  */
+    align-items: stretch; /* flex-start, flex-end, center, baseline*/
+    /* aligns lines of content along the cross axis,
+     mix of justify-content and align-items,
+      distributes extra space along cross axis,
+      effect is seen only if there are multiple rows/columns are present */
+    align-content: stretch; /* flex-start, flex-end, center, space-between, space-around*/
+}
+
+/* Flex Item properties */
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    /* To allow items grow evenly to occupy space in main axis */
+    flex-grow: 1;
+    /* To prevent items shrink in main axis ( so that it just overflows on */
+    flex-shrink: 0
+}
+
+.item-1 {
+    background-color: #B4BF35;
+}
+.item-2 {
+    background-color: #B95F21;
+}
+.item-3 {
+    background-color: #1C4C56;
+    /* Accepts integer to specify the item order
+    elements of same order will be placed next to each and their HTML order will be considered
+    All items by default have order 0, since 1>0 item 3 will be pushed to last in the row */
+    order: 1;
+}
+.item-4 {
+    background-color: #CfB276;
+    /* The amount of space inside the flex container the item should take up if necessary
+    It is relative to size of other items in the flex container
+    Do not specify negative values */
+    flex-grow: 2;
+}
+.item-5 {
+    background-color: #6B0803;
+    flex-grow: 1;
+}
+.item-6 {
+    background-color: #1C4C56;
+     /* Defines the ability of a flex item to shrink if necessary,
+    default value is 1
+    To prevent shrinking, assign value as 0 */
+    flex-shrink: 4
+}
+.item-7 {
+    background-color: #B95F21;
+    /* Specifies initial size of a flex item before extra space in the container is distributed,
+    used in place of the width property in flex layout
+    By default, flex item width depends on its content
+    Default value: auto
+    flex-grow and flex-shrink apply on top of flex-basis */
+    flex-basis: 200px;
+    /* Shorthand for flex-grow, flex-shrink, flex-basis */
+    flex: 1 0 200px;
+    /* To control alignment of individual flex items,
+    Test with setting the height of container,
+    Default value is auto, which is value of align-items property of the flex-container */
+    align-self: stretch; /* flex-start, flex-end, center */
+}
+.item-8 {
+    background-color: #01243A;
+}
+.item-9 {
+    background-color: #AAD041;
+}
+
+/* To make layout responsive */
+@media all and (max-width: 540px) {
+    .flex-main {
+        flex-direction: column;
+    }
+}

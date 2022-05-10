@@ -1,0 +1,415 @@
+<!-- Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Cheatsheet</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div>
+			<h3>JavaScript Display Possibilities</h3>
+			<p id="inner-html"></p>
+			<button type="button" 
+				onclick="document.write('Using document.write() after an HTML document is loaded, will delete all existing HTML')">document write</button><br>
+			<!--  the window object is the global scope object, that means that variables, properties, and methods by default belong to the window object.
+				This also means that specifying the window keyword is optional -->
+			<button type="button" 
+				onclick="alert('Hi, I am an alert')">Alert</button><br>
+
+			<button onclick="print()">Print this page</button>
+		</div>
+		<hr>
+		<div>
+			<h3>JavaScript Operator Precedence Values</h3>
+			<div style="height:500px; width:700px; overflow: auto; border: 1px solid black;"">
+				<table id="operator-table">
+					<tbody>
+					<tr>
+					<th >Value</th>
+					<th >Operator</th>
+					<th>Description</th>
+					<th>Example</th>
+					</tr>
+					<tr>
+					<td>20</td>
+					<td>( )</td>
+					<td>Expression grouping</td>
+					<td>(3 + 4)</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>19</td>
+					<td>.</td>
+					<td>Member</td>
+					<td>person.name</td>
+					</tr>
+					<tr>
+					<td>19</td>
+					<td>[]</td>
+					<td>Member</td>
+					<td>person["name"]</td>
+					</tr>
+					<tr>
+					<td>19</td>
+					<td>()</td>
+					<td>Function call</td>
+					<td>myFunction()</td>
+					</tr>
+					<tr>
+					<td>19</td>
+					<td>new</td>
+					<td>Create</td>
+					<td>new Date()</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>17</td>
+					<td>++</td>
+					<td>Postfix Increment</td>
+					<td>i++</td>
+					</tr>
+					<tr>
+					<td>17</td>
+					<td>--</td>
+					<td>Postfix Decrement</td>
+					<td>i--</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>16</td>
+					<td>++</td>
+					<td>Prefix Increment</td>
+					<td>++i</td>
+					</tr>
+					<tr>
+					<td>16</td>
+					<td>--</td>
+					<td>Prefix Decrement</td>
+					<td>--i</td>
+					</tr>
+					<tr>
+					<td>16</td>
+					<td>!</td>
+					<td>Logical not</td>
+					<td>!(x==y)</td>
+					</tr>
+					<tr>
+					<td>16</td>
+					<td>typeof</td>
+					<td>Type</td>
+					<td>typeof x</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr class="w3-pale-red">
+					<td>15</td>
+					<td>**</td>
+					<td>Exponentiation (ES2016)</td>
+					<td>10 ** 2</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>14</td>
+					<td>*</td>
+					<td>Multiplication</td>
+					<td>10 * 5</td>
+					</tr>
+					<tr>
+					<td>14</td>
+					<td>/</td>
+					<td>Division</td>
+					<td>10 / 5</td>
+					</tr>
+					<tr>
+					<td>14</td>
+					<td>%</td>
+					<td>Division Remainder</td>
+					<td>10 % 5</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>13</td>
+					<td>+</td>
+					<td>Addition</td>
+					<td>10 + 5</td>
+					</tr>
+					<tr>
+					<td>13</td>
+					<td>-</td>
+					<td>Subtraction</td>
+					<td>10 - 5</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>12</td>
+					<td>&lt;&lt;</td>
+					<td>Shift left</td>
+					<td>x &lt;&lt; 2</td>
+					</tr>
+					<tr>
+					<td>12</td>
+					<td>&gt;&gt;</td>
+					<td>Shift right</td>
+					<td>x &gt;&gt; 2</td>
+					</tr>
+					<tr>
+					<td>12</td>
+					<td>&gt;&gt;&gt;</td>
+					<td>Shift right (unsigned)</td>
+					<td>x &gt;&gt;&gt; 2</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>11</td>
+					<td>&lt;</td>
+					<td>Less than</td>
+					<td>x &lt; y&nbsp;</td>
+					</tr>
+					<tr>
+					<td>11</td>
+					<td>&lt;=</td>
+					<td>Less than or equal</td>
+					<td>x &lt;= y</td>
+					</tr>
+					<tr>
+					<td>11</td>
+					<td>&gt;</td>
+					<td>Greater than</td>
+					<td>x &gt; y</td>
+					</tr>
+					<tr>
+					<td>11</td>
+					<td>&gt;=</td>
+					<td>Greater than or equal</td>
+					<td>x &gt;= y</td>
+					</tr>
+					<tr class="w3-pale-red">
+					<td>11</td>
+					<td>in</td>
+					<td>Property in Object</td>
+					<td>"PI" in Math</td>
+					</tr>
+					<tr class="w3-pale-red">
+					<td>11</td>
+					<td>instanceof</td>
+					<td>Instance of Object</td>
+					<td>instanceof Array</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>10</td>
+					<td>==</td>
+					<td>Equal</td>
+					<td>x == y</td>
+					</tr>
+					<tr>
+					<td>10</td>
+					<td>===</td>
+					<td>Strict equal</td>
+					<td>x === y</td>
+					</tr>
+					<tr>
+					<td>10</td>
+					<td>!=</td>
+					<td>Unequal</td>
+					<td>x != y</td>
+					</tr>
+					<tr>
+					<td>10</td>
+					<td>!==</td>
+					<td>Strict unequal</td>
+					<td>x !== y</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>9</td>
+					<td>&amp;</td>
+					<td>Bitwise AND</td>
+					<td>x &amp; y</td>
+					</tr>
+					<tr>
+					<td>8</td>
+					<td>^</td>
+					<td>Bitwise XOR</td>
+					<td>x ^ y</td>
+					</tr>
+					<tr>
+					<td>7</td>
+					<td>|</td>
+					<td>Bitwise OR</td>
+					<td>x | y</td>
+					</tr>
+					<tr>
+					<td>6</td>
+					<td>&amp;&amp;</td>
+					<td>Logical AND</td>
+					<td>x &amp;&amp; y</td>
+					</tr>
+					<tr>
+					<td>5</td>
+					<td>||</td>
+					<td>Logical OR</td>
+					<td>x || y</td>
+					</tr>
+					<tr>
+					<td>4</td>
+					<td>? :</td>
+					<td>Condition</td>
+					<td>? "Yes" : "No"</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>+=</td>
+					<td>Assignment</td>
+					<td>x += y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>/=</td>
+					<td>Assignment</td>
+					<td>x /= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>-=</td>
+					<td>Assignment</td>
+					<td>x -= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>*=</td>
+					<td>Assignment</td>
+					<td>x *= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>%=</td>
+					<td>Assignment</td>
+					<td>x %= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>&lt;&lt;=</td>
+					<td>Assignment</td>
+					<td>x &lt;&lt;= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>&gt;&gt;=</td>
+					<td>Assignment</td>
+					<td>x &gt;&gt;= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>&gt;&gt;&gt;=</td>
+					<td>Assignment</td>
+					<td>x &gt;&gt;&gt;= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>&amp;=</td>
+					<td>Assignment</td>
+					<td>x &amp;= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>^=</td>
+					<td>Assignment</td>
+					<td>x ^= y</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td>|=</td>
+					<td>Assignment</td>
+					<td>x |= y</td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					</tr>
+					<tr class="w3-pale-red">
+					<td>2</td>
+					<td>yield</td>
+					<td>Pause Function</td>
+					<td>yield x</td>
+					</tr>
+					<tr>
+					<td>1</td>
+					<td>,</td>
+					<td>Comma</td>
+					<td>5 , 6</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<button onclick="this.innerHTML = Date()">The time is?</button>
+		<hr>
+		<div>
+			<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+				Name: <input type="text" name="fname">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<script src="index.js"></script>
+		<hr>
+	</body>
+</html>
